@@ -1,0 +1,16 @@
+
+<p> Welcome, <%=current_user.username%>
+<br>
+<br>
+<a href="/tweets/new">New Tweet</a>
+<h2>Fwitter Feed:</h2> 
+
+
+
+<%@tweets.each do |t|%>
+<div>
+<a href="/tweets/<%=t.id%>"><%=t.content%></a>
+<br>
+</div>
+<%end%>
+<br>
